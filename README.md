@@ -17,3 +17,7 @@ Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
     MicroPython script to read the registers of LPUART peripherals from the microcontroller's memory space. It lists various registers such as version, baud rate, and status
     for each LPUART and provides explanations of each register's purpose. [Comments](https://github.com/MicroControleurMonde/Teensy_4.1/blob/main/Teesny_LUPART.md)
   
+# References:
+
+- **Arm Platform Memory Map.txt**
+Extract from NXP pdf - Arm Platform Memory Map for the i.MX RT1060
