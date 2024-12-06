@@ -34,9 +34,9 @@ def read_unique_id():
     print("Reading unique ID:")
     # Read the 64-bit unique ID (2 registers, each 32 bits)
     unique_id_high = read_register(UNIQUE_ID_ADDR)  # High part of the unique ID
-    print("DEBUG High part of unique ID (hex) :", hex(unique_id_high))
+    print("DEBUG Higher part of unique ID (hex) :", hex(unique_id_high))
     unique_id_low = read_register(UNIQUE_ID_ADDR + 4)  # Low part of the unique ID
-    print("DEBUG Low part of unique ID (hex) :", hex(unique_id_low))
+    print("DEBUG Lower part of unique ID (hex) :", hex(unique_id_low))
     # Combine the two parts to get the full 64-bit ID
     unique_id = (unique_id_high << 32) | unique_id_low
     # Display the full 64-bit unique ID in hexadecimal format
