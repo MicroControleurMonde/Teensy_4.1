@@ -19,7 +19,7 @@ Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
   
 - **Teensy_gpio_test.py**
   
-Tests GPIO pins by setting their outputs and reading their inputs using direct memory-mapped I/O.
+    Tests GPIO pins by setting their outputs and reading their inputs using direct memory-mapped I/O.
   
 # References:
 
