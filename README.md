@@ -17,6 +17,10 @@ Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
     MicroPython script to read the registers of LPUART peripherals from the microcontroller's memory space. It lists various registers such as version, baud rate, and status
     for each LPUART and provides explanations of each register's purpose. [Comments](https://github.com/MicroControleurMonde/Teensy_4.1/blob/main/Teesny_LUPART.md)
   
+- **Teensy_gpio_test.py**
+  
+Tests GPIO pins by setting their outputs and reading their inputs using direct memory-mapped I/O.
+  
 # References:
 
 - **Arm Platform Memory Map.txt**
