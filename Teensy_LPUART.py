@@ -1,12 +1,11 @@
 '''
     LPUART Register Reader on Teensy 4.1 with NXP i.MX RT1060 (Cortex-M7)
-
     This script reads the registers of LPUART peripherals from the microcontroller's
     memory space. It lists various registers such as version, baud rate, and status
     for each LPUART and provides explanations of each register's purpose.
-
     Author: [MicroControleurMonde]
     Date: [06.12.2024]
+    Teesny_LUPART.py
     Version: 1.0
 '''
 import machine
@@ -64,7 +63,7 @@ def list_lpuart_registers():
         'DATA': 'Data to transmit or received data.',
         'MATCH': 'Match address for receiving a message.',
         'MODIR': 'Configuration for modem or IrDA.',
-        'FIFO': 'FIFO (First-In, First-Out) configuration for data management.',
+        'FIFO': 'FIFO configuration for data management.',
         'WATER': 'FIFO watermark thresholds (minimum number of data before an interrupt).'
     }
     # Loop through each LPUART and read the registers
