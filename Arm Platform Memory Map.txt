@@ -1,0 +1,254 @@
+Teensy 4.1 - Arm Platform Memory Map
+
+Chip memory map tables.
+
+---
+
+### **System Memory Map (CM7)**
+
+| **Start Address** | **End Address** | **Size** | **Description**                |     ** Teensy 4.1 **               |
+|-------------------|-----------------|----------|--------------------------------|                                    |
+| 4180_0000         | 41FF_FFFF       | 8MB      | Reserved                       |                                    |
+| 4170_0000         | 417F_FFFF       | 1MB      | GPV Reserved                   |                                    |
+| 4160_0000         | 416F_FFFF       | 1MB      | GPV Reserved                   |                                    |
+| 4150_0000         | 415F_FFFF       | 1MB      | GPV Reserved                   |                                    |
+| 4140_0000         | 414F_FFFF       | 1MB      | "cpu" configuration port       |                                    |
+| 4130_0000         | 413F_FFFF       | 1MB      | Reserved for "ems" GPV         |                                    |
+| 4120_0000         | 412F_FFFF       | 1MB      | Reserved for "per" GPV         |                                    |
+| 4110_0000         | 411F_FFFF       | 1MB      | "m" configuration port         |                                    |
+| 4100_0000         | 410F_FFFF       | 1MB      | "main" configuration port      |                                    |
+| 4040_0000         | 40FF_FFFF       | 12MB     | Reserved                       |                                    |
+| 4030_0000         | 403F_FFFF       | 1MB      | AIPS-4                         |Normal Peripherals on AIPS1-4 DMA can access anything here
+| 4020_0000         | 402F_FFFF       | 1MB      | AIPS-3                         |                                    |
+| 4010_0000         | 401F_FFFF       | 1MB      | AIPS-2                         |                                    |
+| 4000_0000         | 400F_FFFF       | 1MB      | AIPS-1                         |                                    |
+| 3000_0000         | 3FFF_FFFF       | 256MB    | Reserved                       |                                    |
+| 2040_0000         | 2FFF_FFFF       | 252MB    | Reserved                       |                                    |
+| 2030_0000         | 203F_FFFF       | 1MB      | OCRAM Reserved                 |                                    |
+| 2028_0000         | 202F_FFFF       | 512KB    | OCRAM - FlexRAM                |                                    |
+| 2020_0000         | 2027_FFFF       | 512KB    | OCRAM2                         |  RAM2 memory (DMAMEM,malloc/new)   |
+| 2010_0000         | 201F_FFFF       | 1MB      | Reserved                       |                                    |
+| 2008_0000         | 200F_FFFF       | 512KB    | DTCM Reserved                  |                                    |
+| 2000_0000         | 2007_FFFF       | 512KB    | DTCM                           |  RAM1 - Variables default location |
+| 1000_0000         | 1FFF_FFFF       | 256MB    | SEMC (Aliased) Reserved        |                                    |
+| 0800_0000         | 0FFF_FFFF       | 128MB    | FlexSPI (Aliased) Reserved     |                                    |
+| 0040_0000         | 07FF_FFFF       | 124MB    | Reserved                       |                                    |
+| 0028_0000         | 003F_FFFF       | 1536KB   | Reserved                       |                                    |
+| 416KB             | 384KB           |          | Reserved                       |                                    |
+| 0021_8000         | 0027_FFFF       | 0        | Reserved                       |                                    |
+| 0020_0000         | 0021_7FFF       | 96KB     | Reserved                       |                                    |
+| 0010_0000         | 001F_FFFF       | 1MB      | ITCM Reserved                  |                                    |
+| 0008_0000         | 000F_FFFF       | 512KB    | ITCM Reserved                  |                                    |
+| 0000_0000         | 0007_FFFF       | 512KB    | ITCM                           | RAM1 - Code default location       | 
+---
+
+### **AIPS-1 Cartes Mémoire**
+
+| **Adresse de Début** | **Adresse de Fin** | **Taille** | **Région**   | **Port NIC**   |
+|----------------------|--------------------|------------|--------------|----------------|
+| 400F_C000            | 400F_FFFF          | 16KB       | AIPS-1       | CCM(CCM)       |
+| 400F_8000            | 400F_BFFF          | 16KB       | AIPS-1       | SRC(SRC)       |
+| 400F_4000            | 400F_7FFF          | 16KB       | AIPS-1       | GPC            |
+| 400F_0000            | 400F_3FFF          | 16KB       | AIPS-1       | Reserved        |
+| 400E_C000            | 400E_FFFF          | 16KB       | AIPS-1       | DMA_CH_MUX     |
+| 400E_8000            | 400E_BFFF          | 16KB       | AIPS-1       | EDMA           |
+| 400E_4000            | 400E_7FFF          | 16KB       | AIPS-1       | SJC            |
+| 400E_0000            | 400E_3FFF          | 16KB       | AIPS-1       | TSC_DIG        |
+| 400D_C000            | 400D_FFFF          | 16KB       | AIPS-1       | CSU            |
+| 400D_8000            | 400D_BFFF          | 16KB       | AIPS-1       | ANALOG         |
+| 400D_4000            | 400D_7FFF          | 16KB       | AIPS-1       | SNVS_HP        |
+| 400D_0000            | 400D_3FFF          | 16KB       | AIPS-1       | WDOG2          |
+| 400C_C000            | 400C_FFFF          | 16KB       | AIPS-1       | TRNG           |
+| 400C_8000            | 400C_BFFF          | 16KB       | AIPS-1       | ADC2           |
+| 400C_4000            | 400C_7FFF          | 16KB       | AIPS-1       | ADC1           |
+| 400C_0000            | 400C_3FFF          | 16KB       | AIPS-1       | GPIO5          |
+| 400B_C000            | 400B_FFFF          | 16KB       | AIPS-1       | WDOG3          |
+| 400B_8000            | 400B_BFFF          | 16KB       | AIPS-1       | WDOG1          |
+| 400B_4000            | 400B_7FFF          | 16KB       | AIPS-1       | EWM            |
+| 400B_0000            | 400B_3FFF          | 16KB       | AIPS-1       | CM7_MXRT (FLEXRAM) |
+| 400A_C000            | 400A_FFFF          | 16KB       | AIPS-1       | IOMUXC_GPR     |
+| 400A_8000            | 400A_BFFF          | 16KB       | AIPS-1       | IOMUXC_SNVS    |
+| 400A_4000            | 400A_7FFF          | 16KB       | AIPS-1       | IOMUXC_SNVS_GPR|
+| 400A_0000            | 400A_3FFF          | 16KB       | AIPS-1       | Reserved       |
+| 4009_C000            | 4009_FFFF          | 16KB       | AIPS-1       | Reserved       |
+| 4009_8000            | 4009_BFFF          | 16KB       | AIPS-1       | Reserved       |
+| 4009_4000            | 4009_7FFF          | 16KB       | AIPS-1       | ACMP           |
+| 4009_0000            | 4009_3FFF          | 16KB       | AIPS-1       | Reserved       |
+| 4008_C000            | 4008_FFFF          | 16KB       | AIPS-1       | Reserved       |
+| 4008_8000            | 4008_BFFF          | 16KB       | AIPS-1       | Reserved       |
+| 4008_4000            | 4008_7FFF          | 16KB       | AIPS-1       | PIT            |
+| 4008_0000            | 4008_3FFF          | 16KB       | AIPS-1       | DCDC           |
+| 4007_C000            | 4007_FFFF          | 16KB       | AIPS-1       | AIPS-1 Configuration |
+| 4004_0000            | 4007_BFFF          | 240KB      | AIPS-1       | Reserved        |
+| 4000_0000            | 4003_FFFF          | 256KB      | AIPS-1       | Reserved        |
+
+---
+
+### **AIPS-2 Cartes Mémoire**
+
+| **Adresse de Début** | **Adresse de Fin** | **Taille** | **Région**       | **Port NIC** |
+|----------------------|--------------------|------------|------------------|--------------|
+| 401F_C000            | 401F_FFFF          | 16KB       |    AIPS-2        | KPP          |
+| 401F_8000            | 401F_BFFF          | 16KB       |    AIPS-2        | IOMUXC       |
+| 401F_4000            | 401F_7FFF          | 16KB       |    AIPS-2        | OCOTP        |
+| 401F_0000            | 401F_3FFF          | 16KB       |    AIPS-2        | GPT2         |
+| 401E_C000            | 401E_FFFF          | 16KB       |    AIPS-2        | GPT1         |
+| 401E_8000            | 401E_BFFF          | 16KB       |    AIPS-2        | QTimer4      |
+| 401E_4000            | 401E_7FFF          | 16KB       |    AIPS-2        | QTimer3      |
+| 401E_0000            | 401E_3FFF          | 16KB       |    AIPS-2        | QTimer2      |
+| 401D_C000            | 401D_FFFF          | 16KB       |    AIPS-2        | QTimer1      |
+| 401D_8000            | 401D_BFFF          | 16KB       |    AIPS-2        | CANFD (FlexCAN3) |
+| 401D_4000            | 401D_7FFF          | 16KB       |    AIPS-2        | FlexCAN2     |
+| 401D_0000            | 401D_3FFF          | 16KB       |    AIPS-2        | FlexCAN1     |
+| 401C_C000            | 401C_FFFF          | 16KB       |    AIPS-2        | Reserved     |
+| 401C_8000            | 401C_BFFF          | 16KB       |    AIPS-2        | Reserved     |
+| 401C_4000            | 401C_7FFF          | 16KB       |    AIPS-2        | GPIO4        |
+| 401C_0000            | 401C_3FFF          | 16KB       |    AIPS-2        | GPIO3        |
+| 401B_C000            | 401B_FFFF          | 16KB       |    AIPS-2        | GPIO2        |
+| 401B_8000            | 401B_BFFF          | 16KB       |    AIPS-2        | GPIO1        |
+| 401B_4000            | 401B_7FFF          | 16KB       |    AIPS-2        | Reserved     |
+| 401B_0000            | 401B_3FFF          | 16KB       |    AIPS-2        | FlexIO2      |
+| 401A_C000            | 401A_FFFF          | 16KB       |    AIPS-2        | FlexIO1      |
+| 401A_8000            | 401A_BFFF          | 16KB       |    AIPS-2        | Reserved     |
+| 401A_4000            | 401A_7FFF          | 16KB       |    AIPS-2        | Reserved     |
+| 401A_0000            | 401A_3FFF          | 16KB       |    AIPS-2        | LPUART8      |
+| 4019_C000            | 4019_FFFF          | 16KB       |    AIPS-2        | LPUART7      |
+| 4019_8000            | 4019_BFFF          | 16KB       |    AIPS-2        | LPUART6      |
+| 4019_4000            | 4019_7FFF          | 16KB       |    AIPS-2        | LPUART5      |
+| 4019_0000            | 4019_3FFF          | 16KB       |    AIPS-2        | LPUART4      |
+| 4018_C000            | 4018_FFFF          | 16KB       |    AIPS-2        | LPUART3      |
+| 4018_8000            | 4018_BFFF          | 16KB       |    AIPS-2        | LPUART2      |
+| 4018_4000            | 4018_7FFF          | 16KB       |    AIPS-2        | LPUART1      |
+| 4018_0000            | 4018_3FFF          | 16KB       |    AIPS-2        | Reserved      |
+| 4017_C000            | 4017_FFFF          | 16KB       |    AIPS-2        | Configuration AIPS-2 |
+| 4014_0000            | 4017_BFFF          | 240KB      |    AIPS-2        | Reserved      |
+| 4010_0000            | 4013_FFFF          | 256KB      |    AIPS-2        | Reserved      |
+
+---
+
+### **AIPS-3 Memory Map**
+
+| **Start Address** | **End Address** | **Region**  | **Size** | **NIC Port** |
+|-------------------|-----------------|------------|----------|--------------|
+| 402F_C000         | 402F_FFFF       | AIPS-3     | 16KB     | DCP          |
+| 402F_8000         | 402F_BFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402F_4000         | 402F_7FFF       | AIPS-3     | 16KB     | Reserved     |
+| 402F_0000         | 402F_3FFF       | AIPS-3     | 16KB     | SEMC         |
+| 402E_C000         | 402E_FFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402E_8000         | 402E_BFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402E_4000         | 402E_7FFF       | AIPS-3     | 16KB     | Reserved     |
+| 402E_0000         | 402E_3FFF       | AIPS-3     | 16KB     | USB(USB)     |
+| 402D_C000         | 402D_FFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402D_8000         | 402D_BFFF       | AIPS-3     | 16KB     | ENET         |
+| 402D_4000         | 402D_7FFF       | AIPS-3     | 16KB     | ENET2        |
+| 402D_0000         | 402D_3FFF       | AIPS-3     | 16KB     | Reserved     |
+| 402C_C000         | 402C_FFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402C_8000         | 402C_BFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402C_4000         | 402C_7FFF       | AIPS-3     | 16KB     | USDHC2       |
+| 402C_0000         | 402C_3FFF       | AIPS-3     | 16KB     | USDHC1       |
+| 402B_C000         | 402B_FFFF       | AIPS-3     | 16KB     | CSI          |
+| 402B_8000         | 402B_BFFF       | AIPS-3     | 16KB     | LCDIF        |
+| 402B_4000         | 402B_7FFF       | AIPS-3     | 16KB     | PXP          |
+| 402B_0000         | 402B_3FFF       | AIPS-3     | 16KB     | Reserved     |
+| 402A_C000         | 402A_FFFF       | AIPS-3     | 16KB     | Reserved     |
+| 402A_8000         | 402A_BFFF       | AIPS-3     | 16KB     | FlexSPI      |
+| 402A_4000         | 402A_7FFF       | AIPS-3     | 16KB     | ReservedFlexSPI2 |
+| 402A_0000         | 402A_3FFF       | AIPS-3     | 16KB     | Reserved     |
+| 4029_C000         | 4029_FFFF       | AIPS-3     | 16KB     | Reserved     |
+| 4029_8000         | 4029_BFFF       | AIPS-3     | 16KB     | Reserved     |
+| 4029_4000         | 4029_7FFF       | AIPS-3     | 16KB     | Reserved     |
+| 4029_0000         | 4029_3FFF       | AIPS-3     | 16KB     | Reserved     |
+| 4028_C000         | 4028_FFFF       | AIPS-3     | 16KB     | Reserved     |
+| 4028_8000         | 4028_BFFF       | AIPS-3     | 16KB     | Reserved     |
+| 4028_4000         | 4028_7FFF       | AIPS-3     | 16KB     | Reserved     |
+| 4028_0000         | 4028_3FFF       | AIPS-3     | 16KB     | Reserved     |
+| 4027_C000         | 4027_FFFF       | AIPS-3     | 16KB     | AIPS-3 Configuration |
+| 4024_0000         | 4027_BFFF       | AIPS-3     | 240KB    | Reserved     |
+| 4020_0000         | 4023_FFFF       | AIPS-3     | 256KB    | Reserved     |
+
+---
+
+### **AIPS-4 Memory Map**
+
+| **Start Address** | **End Address** | **Region** | **Size** | **NIC Port**      |
+|-------------------|-----------------|------------|----------|-------------------|
+| 403F_C000         | 403F_FFFF       | AIPS-4     | 16KB     | LPI2C4            |
+| 403F_8000         | 403F_BFFF       | AIPS-4     | 16KB     | LPI2C3            |
+| 403F_4000         | 403F_7FFF       | AIPS-4     | 16KB     | LPI2C2            |
+| 403F_0000         | 403F_3FFF       | AIPS-4     | 16KB     | LPI2C1            |
+| 403E_C000         | 403E_FFFF       | AIPS-4     | 16KB     | BEE               |
+| 403E_8000         | 403E_BFFF       | AIPS-4     | 16KB     | FLEXPWM4          |
+| 403E_4000         | 403E_7FFF       | AIPS-4     | 16KB     | FLEXPWM3          |
+| 403E_0000         | 403E_3FFF       | AIPS-4     | 16KB     | FLEXPWM2          |
+| 403D_C000         | 403D_FFFF       | AIPS-4     | 16KB     | FLEXPWM1          |
+| 403D_8000         | 403D_BFFF       | AIPS-4     | 16KB     | Reserved          |
+| 403D_4000         | 403D_7FFF       | AIPS-4     | 16KB     | QDC4              |
+| 403D_0000         | 403D_3FFF       | AIPS-4     | 16KB     | QDC3              |
+| 403C_C000         | 403C_FFFF       | AIPS-4     | 16KB     | QDC2              |
+| 403C_8000         | 403C_BFFF       | AIPS-4     | 16KB     | QDC1              |
+| 403C_4000         | 403C_7FFF       | AIPS-4     | 16KB     | XBAR3             |
+| 403C_0000         | 403C_3FFF       | AIPS-4     | 16KB     | XBAR2             |
+| 403B_C000         | 403B_FFFF       | AIPS-4     | 16KB     | XBAR1             |
+| 403B_8000         | 403B_BFFF       | AIPS-4     | 16KB     | AOI2              |
+| 403B_4000         | 403B_7FFF       | AIPS-4     | 16KB     | AOI1              |
+| 403B_0000         | 403B_3FFF       | AIPS-4     | 16KB     | ADC_ETC           |
+| 403A_C000         | 403A_FFFF       | AIPS-4     | 16KB     | Reserved          |
+| 403A_8000         | 403A_BFFF       | AIPS-4     | 16KB     | Reserved          |
+| 403A_4000         | 403A_7FFF       | AIPS-4     | 16KB     | Reserved          |
+| 403A_0000         | 403A_3FFF       | AIPS-4     | 16KB     | LPSPI4            |
+| 4039_C000         | 4039_FFFF       | AIPS-4     | 16KB     | LPSPI3            |
+| 4039_8000         | 4039_BFFF       | AIPS-4     | 16KB     | LPSPI2            |
+| 4039_4000         | 4039_7FFF       | AIPS-4     | 16KB     | LPSPI1            |
+| 4039_0000         | 4039_3FFF       | AIPS-4     | 16KB     | Reserved          |
+| 4038_C000         | 4038_FFFF       | AIPS-4     | 16KB     | SAI3              |
+| 4038_8000         | 4038_BFFF       | AIPS-4     | 16KB     | SAI2              |
+| 4038_4000         | 4038_7FFF       | AIPS-4     | 16KB     | SAI1              |
+| 4038_0000         | 4038_3FFF       | AIPS-4     | 16KB     | SPDIF             |
+| 4037_C000         | 4037_FFFF       | AIPS-4     | 16KB     | AIPS-4 Configuration |
+| 4034_0000         | 4037_BFFF       | AIPS-4     | 240KB    | Reserved          |
+| 4030_0000         | 4033_FFFF       | AIPS-4     | 256KB    | Reserved          |
+
+---
+
+### **AIPS-5 Memory Map** No DMA access
+
+| **Start Address** | **End Address** | **Region** | **Size** | **NIC Port**           |
+|-------------------|-----------------|------------|----------|------------------------|
+| 4208_0000         | 420F_FFFF       | AIPS-5     | 512KB    | Reserved off platform slots |
+| 4207_C000         | 4207_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4207_8000         | 4207_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4207_4000         | 4207_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4207_0000         | 4207_3FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4206_C000         | 4206_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4206_8000         | 4206_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4206_4000         | 4206_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4206_0000         | 4206_3FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4205_C000         | 4205_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4205_8000         | 4205_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4205_4000         | 4205_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4205_0000         | 4205_3FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4204_C000         | 4204_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4204_8000         | 4204_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4204_4000         | 4204_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4204_0000         | 4204_3FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4203_C000         | 4203_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4203_8000         | 4203_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4203_4000         | 4203_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4203_0000         | 4203_3FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4202_C000         | 4202_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4202_8000         | 4202_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4202_4000         | 4202_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4202_0000         | 4202_3FFF       | AIPS-5     | 16KB     | FlexIO3                |
+| 4201_C000         | 4201_FFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4201_8000         | 4201_BFFF       | AIPS-5     | 16KB     | Reserved               |
+| 4201_4000         | 4201_7FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4201_0000         | 4201_3FFF       | AIPS-5     | 16KB     | Reserved               |
+| 4200_C000         | 4200_FFFF       | AIPS-5     | 16KB     | GPIO9                  |
+| 4200_8000         | 4200_BFFF       | AIPS-5     | 16KB     | GPIO8                  |
+| 4200_4000         | 4200_7FFF       | AIPS-5     | 16KB     | GPIO7                  |
+| 4200_0000         | 4200_3FFF       | AIPS-5     | 16KB     | GPIO6                  |
+
+---
+
+
+
