@@ -21,7 +21,7 @@ Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
   
     Tests GPIO pins by setting their outputs and reading their inputs using direct memory-mapped I/O.
   
-# References:
+# Reference:
 
 - **Arm Platform Memory Map.txt**
 Extract from NXP pdf - Arm Platform Memory Map for the i.MX RT1060
