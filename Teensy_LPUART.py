@@ -1,7 +1,7 @@
 '''
     LPUART Register Reader on Teensy 4.1 with NXP i.MX RT1060 (Cortex-M7)
 
-    This script reads the registers of LPUART peripherals from a microcontroller's
+    This script reads the registers of LPUART peripherals from the microcontroller's
     memory space. It lists various registers such as version, baud rate, and status
     for each LPUART and provides explanations of each register's purpose.
 
