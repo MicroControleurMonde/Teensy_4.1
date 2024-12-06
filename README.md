@@ -21,6 +21,13 @@ Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
   
     Tests GPIO pins by setting their outputs and reading their inputs using direct memory-mapped I/O.
   
+- **Teensy_Test_Memories.py**
+
+    Tests Memory for Embedded Systems (BOARD_FLASH / SRAM_DTC / SRAM_ITC / SRAM_OC)
+
+    Negative addresses reported for BOARD_FLASH during the testing (Block -0x20000000, etc.) are likely a result of  incorrect interpretation of the memory addresses.
+
+  
 # Reference:
 
 - **Arm Platform Memory Map.txt**
