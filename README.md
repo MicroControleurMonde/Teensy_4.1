@@ -1,4 +1,4 @@
-# Teensy_4.1
+# Teensy 4.1 (Toolbox)
 Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
 
 - **Teensy_clk.py**: 
