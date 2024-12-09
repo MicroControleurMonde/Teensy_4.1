@@ -11,6 +11,8 @@ Micropython code collection for Teensy 4.1 with MIMXRT1062DVJ6A
 
     MicroPython script to read the unique device ID from the eFuse (OTP) memory of a microcontroller. This script reads the 64-bit unique ID stored in the eFuse memory by       accessing the appropriate registers and displays the high and low parts of the ID in hexadecimal format.
     The unique ID is typically used for device identification purposes, especially in security and authentication applications. [Code](https://github.com/MicroControleurMonde/Teensy_4.1/blob/main/Teensy_eFUSE_unique_id.py)
+  
+  **Update**: MAC address OUI added.
 
 - **Teensy_LPUART.py**:
   
